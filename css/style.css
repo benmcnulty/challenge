@@ -85,7 +85,11 @@ body {
 /* Color */
 .fireLounge {
     color: rgba(255, 255, 255, 1);
-    background: #000000;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.areaName {
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .scenery {
@@ -179,8 +183,4 @@ body {
 
 .areaName, .itemName, .itemDescription {
     text-shadow: 0 0 1rem rgba(0, 0, 0, 1);
-}
-
-.areaName {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
 }
