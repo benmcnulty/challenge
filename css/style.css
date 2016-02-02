@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Oswald|Source+Sans+Pro);
+/* Resets */
+html {
+    font-size: 16px;
+}
+
+
+/* Typography */
+.areaName {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+}
+
+.itemName {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+
+.itemDescription {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+}
+
+
+/* Sections */
+.fireLounge {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.area {
+    background-color: rgba(127, 127, 127, 1);
+}
+
+.item {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+/* Branding */
+.branding {
+    background-color: rgba(209, 65, 0, 1);
+}
