@@ -4,39 +4,142 @@ html {
     font-size: 16px;
 }
 
+body {
+    margin: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+}
 
 /* Typography */
+.fireLounge {
+    text-align: center;
+}
+
 .areaName {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
 }
 
 .itemName {
     font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
+    font-weight: lighter;
+    text-transform: uppercase;
 }
 
 .itemDescription {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
 }
 
-
-/* Sections */
+/* Layout Sections */
 .fireLounge {
     background-color: rgba(0, 0, 0, 1);
 }
 
+body {
+    background-color: red;
+}
+
 .area {
-    background-color: rgba(127, 127, 127, 1);
+    width: 90vw;
+    margin: 0 auto;
+    overflow: auto;
+    break-inside: avoid;
 }
 
-.item {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-
-/* Branding */
 .branding {
-    background-color: rgba(209, 65, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    width: 12.5rem;
+    margin: 6.25rem auto;
+}
+
+/* Layout Text */
+.areaName {
+    box-sizing: border-box;
+    border: 4px solid rgba(255, 255, 255, 1);
+    padding: 0;
+    margin: .5rem auto;
+}
+
+.itemName {
+    margin: .5rem auto;
+}
+
+.itemDescription {
+    margin: .5rem 2.5rem;
+}
+
+/* First Break Point */
+
+@media (min-width: 40rem) {
+    .fireLounge {
+        -webkit-columns: 3 26.75rem;
+    }
+
+    .area {
+        width: 100%;
+        -webkit-column-break-inside: avoid;
+    }
+
+    .areaName {
+        width: 26.75rem;
+        margin: 2.5rem auto 0;
+    }
+
+    .itemName {
+        margin: 1.5rem auto 0;
+    }
+
+    .itemDescription {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+}
+
+@media (min-width: 80rem) {    
+    #cocktailSpecials {
+        -webkit-column-break-after: always;
+    }
+    
+    #sliderTrios {
+        -webkit-column-break-after: always;
+    }
+}
+
+@media (min-width: 1920px) and (min-height: 1080px) {
+    
+    .fireLounge {
+        height: 100%;
+    }
+    
+    #fireStarters h1, #sliderTrios h1, #giantWings h1 {
+        margin-top: 1.5rem;
+    }
+    
+    .branding {
+        justify-content: auto;
+    }
+
+    #logo {
+        margin: 2.15rem auto 2rem;
+    }
+}
+
+/* Color and Animation */
+.fireLounge {
+    color: rgba(255, 255, 255, 1);
+    background-image: url("../media/animatedFire.gif");
 }
