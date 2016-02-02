@@ -44,7 +44,7 @@ h1, h2, p {
 }
 
 body {
-    background-color: red;
+    background-color: #000000;
 }
 
 .area {
@@ -138,8 +138,24 @@ body {
     }
 }
 
-/* Color and Animation */
+/* Color */
 .fireLounge {
     color: rgba(255, 255, 255, 1);
-    background-image: url("../media/animatedFire.gif");
+    background: #000000;
+}
+
+/* Animation */
+
+@keyframes move {
+	from { background-position: 0 0, 100% 100%; }
+	to { background-position: 100% 100%, 0 0; }
+}
+
+.scenery {
+    transition: background-image 15s ease-out;
+    animation: move 30s linear infinite;
+    background-image: url("../media/newFire.png"), url("../media/clearFire.png");
+    background-position: 0px 0px;
+	background-repeat: repeat;
+    background-size: 150%;
 }
