@@ -6,7 +6,7 @@ html {
 
 body {
     margin: 0;
-    background: #000000;
+    background: rgb(0, 0, 0);
 }
 
 h1, h2, p {
@@ -40,14 +40,6 @@ h1, h2, p {
 }
 
 /* Layout Sections */
-.fireLounge {
-    background-color: rgba(0, 0, 0, 1);
-}
-
-body {
-    background-color: #000000;
-}
-
 .area {
     width: 90vw;
     margin: 0 auto;
@@ -69,7 +61,7 @@ body {
 /* Layout Text */
 .areaName {
     box-sizing: border-box;
-    border: 4px solid rgba(255, 255, 255, 1);
+    border: 4px solid rgb(255, 255, 255);
     padding: 0;
     margin: .5rem auto;
 }
@@ -84,19 +76,27 @@ body {
 
 /* Color */
 .fireLounge {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 .areaName {
     background-color: rgba(0, 0, 0, .5);
 }
 
+@keyframes sway {
+    0% { background-position: 100% 100%, 0 0; }
+    50% { background-position: 0 100%, 100% 0; }
+    100% { background-position: 100% 100%, 0 0; }
+}
+
 .scenery {
-    background-image: url("../media/newFire.png");
-    background-position: 0px 0px;
+    background-image: url("../media/lightFire.png"), url("../media/heavyFire.png");
+    background-position: 100% 100%, 0 0;
 	background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 120%, 130%;
+    transition: background-image 15s ease-in-out;
+    animation: sway 30s linear infinite;
 }
 
 /* First Break Point */
@@ -104,11 +104,13 @@ body {
 @media (min-width: 40rem) {
     .fireLounge {
         -webkit-columns: 3 26.75rem;
+        columns: 3 26.75rem;
     }
 
     .area {
         width: 100%;
         -webkit-column-break-inside: avoid;
+        column-break-inside: avoid;
     }
 
     .areaName {
@@ -124,7 +126,6 @@ body {
         width: 85%;
         margin: 0 auto;
     }
-
 }
 
 /* Second Break */
@@ -132,10 +133,12 @@ body {
 @media (min-width: 80rem) {    
     #cocktailSpecials {
         -webkit-column-break-after: always;
+        column-break-after: always;
     }
     
     #sliderTrios {
         -webkit-column-break-after: always;
+        column-break-after: always;
     }
 }
 
@@ -176,11 +179,10 @@ body {
         background-size: 150%;
         animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
     }
-    
 }
 
 /* Shadow to protect Legibility */
 
 .areaName, .itemName, .itemDescription {
-    text-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+    text-shadow: 0 0 1rem rgb(0, 0, 0);
 }
