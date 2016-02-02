@@ -169,7 +169,7 @@ body {
 
     .scenery {
         transition: background-image 15s ease-in-out;
-        animation: move 60s linear infinite;
+        animation: move 120s linear infinite;
         background-image: url("../media/newFire.png"), url("../media/clearFire.png");
         background-position: 0px 0px, 100% 100%;
 	    background-repeat: repeat;
