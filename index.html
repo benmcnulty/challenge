@@ -6,130 +6,151 @@
     <meta name="description" content="Fire Lounge Menu">
     <meta name="author" content="Ben McNulty">
     <title>Fire Lounge Menu</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/mustache.min.js"></script>
+    <script src="js/menuFetch.js"></script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d64400">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#d64400">
   </head>
 
   <body>
-    <section class="fireLounge scenery" id="fireLoungeMenu">
+    <section class="fireLounge scenery" id="menu" type="text/mustache">
 
-      <section class="area" id="featuredDrinks">
-        <h1 class="areaName">Featured Drinks</h1>
+      <section class="area" id="{{menu.area1.id}}">
+        <h1 class="areaName">{{menu.area1.name}}</h1>
           <section class="item">
-            <h2 class="itemName">Vesper Martini</h2>
-              <p class="itemDescription">Three measures of Gordon's Gin, one of Vodka, half a measure of Kina Lillet. Shaken well until ice cold and served with a large thin slice of lemon peel.</p>
+            <h2 class="itemName">{{menu.area1.item1}}</h2>
+              <p class="itemDescription">{{menu.area1.description1}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Irish Coffee</h2>
-              <p class="itemDescription">A measure and a half of Jigger Irish Whiskey, and a cup of fresh brewed coffee blended well with a tablespoon of brown sugar and served with a dash of heavey cream.</p>
+            <h2 class="itemName">{{menu.area1.item2}}</h2>
+              <p class="itemDescription">{{menu.area1.description2}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Spiced Apple Cocktail</h2>
-              <p class="itemDescription">A half measure of Captain Morgans Dark Rum, a half measure of cinnamon schnapps, a dash of lemon juice, a cup of apple cider served on the rocks.</p>
+            <h2 class="itemName">{{menu.area1.item3}}</h2>
+              <p class="itemDescription">{{menu.area1.description3}}</p>
           </section>
       </section>
 
-      <section class="area" id="cocktailSpecials">
-        <h1 class="areaName">Cocktail Specials</h1>
+      <section class="area" id="{{menu.area2.id}}">
+        <h1 class="areaName">{{menu.area2.name}}</h1>
           <section class="item">
-            <h2 class="itemName">Smirnoff Screwdriver</h2>
-              <p class="itemDescription">Smirnoff Apple shaken well with fresh orange juice</p>
+            <h2 class="itemName">{{menu.area2.item1}}</h2>
+              <p class="itemDescription">{{menu.area2.description1}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Mojito</h2>
-              <p class="itemDescription">Barcardi Rum, club soda, caster sugar, lime and fresh mint leaves served on the rocks</p>
+            <h2 class="itemName">{{menu.area2.item2}}</h2>
+              <p class="itemDescription">{{menu.area2.description2}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Daiquiri</h2>
-              <p class="itemDescription">Barcardi Rum, freshly squeezed lime juice, and sugar</p>
+            <h2 class="itemName">{{menu.area2.item3}}</h2>
+              <p class="itemDescription">{{menu.area2.description3}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Mai Tai</h2>
-              <p class="itemDescription">White and dark rum, fresh lime juice and orange puree</p>
+            <h2 class="itemName">{{menu.area2.item4}}</h2>
+              <p class="itemDescription">{{menu.area2.description4}}</p>
           </section>
           <section class="item"><!--The duplicate remains.-->
-            <h2 class="itemName">Mojito</h2>
-              <p class="itemDescription">Barcardi Rum, club soda, caster sugar, lime and fresh mint leaves served on the rocks</p>
+            <h2 class="itemName">{{menu.area2.item5}}</h2>
+              <p class="itemDescription">{{menu.area2.description5}}</p>
           </section>
       </section>
 
-      <section class="area" id="fireStarters">
-        <h1 class="areaName">Fire Starters</h1>
+      <section class="area" id="{{menu.area3.id}}">
+        <h1 class="areaName">{{menu.area3.name}}</h1>
           <section class="item">
-            <h2 class="itemName">Lava Pretzel Bites</h2>
-              <p class="itemDescription">Salty goodness with beer cheese and sliced jalape&ntilde;os</p>
+            <h2 class="itemName">{{menu.area3.item1}}</h2>
+              <p class="itemDescription">{{menu.area3.description1}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Italian Style Meatballs</h2>
-              <p class="itemDescription">Tuscan balls of beef, pork &amp; sausage topped with house marinara, fresh mozzarella and a sprinkle of basil</p>
+            <h2 class="itemName">{{menu.area3.item2}}</h2>
+              <p class="itemDescription">{{menu.area3.description2}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Fried Up Fries</h2>
-              <p class="itemDescription">Steak fries with cheese curds, poutine brown gravy and topped with bacon</p>
-          </section>
-      </section>
-
-      <section class="area" id="giantWings">
-        <h1 class="areaName">Giant Wings</h1>
-          <section class="item">
-            <h2 class="itemName">Buffalo Style</h2>
-              <p class="itemDescription">Huge wings with roasted buffalo sauce and a side of rustic ranch</p>
-          </section>
-          <section class="item">
-            <h2 class="itemName">Parmesan Garlic</h2>
-              <p class="itemDescription">Our wings served with a tasty parmesan garlic sauce</p>
-          </section>
-          <section class="item">
-            <h2 class="itemName">Blackberry Dijion</h2>
-              <p class="itemDescription">If sweet and tangy is your style, try this original recipe</p>
-          </section>
-          <section class="item">
-            <h2 class="itemName">Asian Ginger</h2>
-              <p class="itemDescription">Look no further for sweet heat</p>
+            <h2 class="itemName">{{menu.area3.item3}}</h2>
+              <p class="itemDescription">{{menu.area3.description3}}</p>
           </section>
       </section>
 
-      <section class="area" id="sliderTrios">
-        <h1 class="areaName">Slider Trios</h1>
+      <section class="area" id="{{menu.area4.id}}">
+        <h1 class="areaName">{{menu.area4.name}}</h1>
           <section class="item">
-            <h2 class="itemName">Cheese Steak</h2>
-              <p class="itemDescription">Served with peppers, onions, garlic ailoli, mushrooms and provolone on freshly baked buns</p>
+            <h2 class="itemName">{{menu.area4.item1}}</h2>
+              <p class="itemDescription">{{menu.area4.description1}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Pulled Pork</h2>
-              <p class="itemDescription">Slow smoked pulled pork with apple slaw and herbs on freshly baked buns</p>
-          </section>
-      </section>
-
-      <section class="area" id="famousFlatbreads">
-        <h1 class="areaName">Famous Flatbreads</h1>
-          <section class="item">
-            <h2 class="itemName">Caprese</h2>
-              <p class="itemDescription">With roasted roma tomatoes, fresh mozzarella, garlic puree, and a drizzle of balsamic glaze</p>
+            <h2 class="itemName">{{menu.area4.item2}}</h2>
+              <p class="itemDescription">{{menu.area4.description2}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Blanca</h2>
-              <p class="itemDescription">Blend of fresh ricotta, Mozzarella with a hint of lemon. Finished with fresh basil and thyme</p>
+            <h2 class="itemName">{{menu.area4.item3}}</h2>
+              <p class="itemDescription">{{menu.area4.description3}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">BBQ Pork</h2>
-              <p class="itemDescription">Slow smoked pork with fire roasted corn salsa, green onions and Carolina BBQ sauce</p>
+            <h2 class="itemName">{{menu.area4.item4}}</h2>
+              <p class="itemDescription">{{menu.area4.description4}}</p>
           </section>
       </section>
 
-      <section class="area" id="toastyTacos">
-        <h1 class="areaName">Toasty Tacos</h1>
+      <section class="area" id="{{menu.area5.id}}">
+        <h1 class="areaName">{{menu.area5.name}}</h1>
           <section class="item">
-            <h2 class="itemName">Buffalo Chicken</h2>
-              <p class="itemDescription">Buffalo blizzard chicken with slaw and blue cheese crumbles. Comes with a carrot &amp; celery slaw with a side of rustic ranch.</p>
+            <h2 class="itemName">{{menu.area5.item1}}</h2>
+              <p class="itemDescription">{{menu.area5.description1}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Fish Tacos</h2>
-              <p class="itemDescription">Fresh Talipia topped with a zesty coleslaw, roasted corn and black bean salsa</p>
+            <h2 class="itemName">{{menu.area5.item2}}</h2>
+              <p class="itemDescription">{{menu.area5.description2}}</p>
+          </section>
+      </section>
+
+      <section class="area" id="{{menu.area6.id}}">
+        <h1 class="areaName">{{menu.area6.name}}</h1>
+          <section class="item">
+            <h2 class="itemName">{{menu.area6.item1}}</h2>
+              <p class="itemDescription">{{menu.area6.description1}}</p>
           </section>
           <section class="item">
-            <h2 class="itemName">Short Rib</h2>
-              <p class="itemDescription">Beer braised short rib with guacamole, queso fresco, cilantro, lime and fresh pico de gallo</p>
+            <h2 class="itemName">{{menu.area6.item2}}</h2>
+              <p class="itemDescription">{{menu.area6.description2}}</p>
+          </section>
+          <section class="item">
+            <h2 class="itemName">{{menu.area6.item3}}</h2>
+              <p class="itemDescription">{{menu.area6.description3}}</p>
+          </section>
+      </section>
+
+      <section class="area" id="{{menu.area7.id}}">
+        <h1 class="areaName">{{menu.area7.name}}</h1>
+          <section class="item">
+            <h2 class="itemName">{{menu.area7.item1}}</h2>
+              <p class="itemDescription">{{menu.area7.description1}}</p>
+          </section>
+          <section class="item">
+            <h2 class="itemName">{{menu.area7.item2}}</h2>
+              <p class="itemDescription">{{menu.area7.description2}}</p>
+          </section>
+          <section class="item">
+            <h2 class="itemName">{{menu.area7.item3}}</h2>
+              <p class="itemDescription">{{menu.area7.description3}}</p>
           </section>
       </section>
 
