@@ -5,7 +5,7 @@
         function loadJSON(callback) {
             var xobj = new XMLHttpRequest();
             xobj.overrideMimeType("application/json");
-            xobj.open('GET', 'js/girder.json', true);
+            xobj.open('GET', 'js/menu.json', false);
             xobj.onreadystatechange = function () {
                 if (xobj.readyState == 4 && xobj.status == "200") {
                     callback(xobj.responseText);
@@ -14,16 +14,16 @@
             xobj.send(null);
         }
 
-        function bend() {
+        function showMenu() {
             loadJSON(function(response) {
-                var bender = document.getElementById("bender").innerHTML;
-                var girder = JSON.parse(response);
-                var output = Mustache.render(bender, girder);
-                document.getElementById("bender").innerHTML = output;
+                var template = document.getElementById("menu").innerHTML;
+                var menu = JSON.parse(response);
+                var output = Mustache.render(template, menu);
+                document.getElementById("menu").innerHTML = output;
             });
         }
         
-        bend();
+        showMenu();
     }
 
     window.addEventListener("load", loaded);

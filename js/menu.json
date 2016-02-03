@@ -1,5 +1,5 @@
-{"girder": {
-    "name": "Menu",
-    "type": "JSON",
-    "class": "girder"
-}}
+{"menu":
+    {"id": "featuredDrinks",
+     "title":"Featured Drinks",
+     "type":"JSON"}
+}

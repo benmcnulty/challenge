@@ -8,7 +8,7 @@
     <title>Fire Lounge Menu</title>
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/mustache.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/menuFetch.js"></script>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -32,10 +32,10 @@
   </head>
 
   <body>
-    <section class="fireLounge scenery" id="fireLoungeMenu">
+    <section class="fireLounge scenery" id="menu" type="text/mustache">
 
-      <section class="area" id="featuredDrinks">
-        <h1 class="areaName">Featured Drinks</h1>
+      <section class="area" id="{{menu.id}}">
+        <h1 class="areaName">{{menu.title}}</h1>
           <section class="item">
             <h2 class="itemName">Vesper Martini</h2>
               <p class="itemDescription">Three measures of Gordon's Gin, one of Vodka, half a measure of Kina Lillet. Shaken well until ice cold and served with a large thin slice of lemon peel.</p>
