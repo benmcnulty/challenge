@@ -1,5 +1,91 @@
 {"menu":
-    {"id": "featuredDrinks",
-     "title":"Featured Drinks",
-     "type":"JSON"}
+    {"brand": "Fire Lounge",
+     "area1":
+       {"id":"featuredDrinks",
+        "name":"Featured Drinks",
+        "item1":"Vesper Martini",
+          "description1":"Three measures of Gordon's Gin, one of Vodka, half a measure of Kina Lillet. Shaken well until ice cold and served with a large thin slice of lemon peel.",
+        "item2":"Irish Coffee",
+          "description2":"A measure and a half of Jigger Irish Whiskey, and a cup of fresh brewed coffee blended well with a tablespoon of brown sugar and served with a dash of heavey cream.",
+        "item3":"Spiced Apple Cocktail",
+          "description3": "A half measure of Captain Morgans Dark Rum, a half measure of cinnamon schnapps, a dash of lemon juice, a cup of apple cider served on the rocks."
+       },
+         
+         
+         
+         
+         
+     "area2":
+       {"id":"cocktailSpecials",
+        "name":"Cocktail Specials",
+        "item1":"Smirnoff Screwdriver",
+          "description1":"Smirnoff Apple shaken well with fresh orange juice.",
+        "item2":"Mojito",
+          "description2":"Barcardi Rum, club soda, caster sugar, lime and fresh mint leaves served on the rocks",
+        "item3":"Daiquiri",
+          "description3": "Barcardi Rum, freshly squeezed lime juice, and sugar",
+        "item4":"Mai Tai",
+          "description4":"White and dark rum, fresh lime juice and orange puree",
+        "item5":"Mojito",
+          "description5":"Barcardi Rum, club soda, caster sugar, lime and fresh mint leaves served on the rocks"
+       },
+       
+     "area3":
+       {"id":"fireStarters",
+        "name":"Fire Starters",
+        "item1":"Lava Pretzel Bites",
+          "description1":"Salty goodness with beer cheese and sliced jalapeños",
+        "item2":"Italian Style Meatballs",
+          "description2":"Tuscan balls of beef, pork & sausage topped with house marinara, fresh mozzarella and a sprinkle of basil",
+        "item3":"Fried Up Fries",
+          "description3": "Steak fries with cheese curds, poutine brown gravy and topped with bacon"
+       },
+       
+     "area4":
+       {"id":"giantWings",
+        "name":"Giant Wings",
+        "item1":"Buffalo Style",
+          "description1":"Huge wings with roasted buffalo sauce and a side of rustic ranch",
+        "item2":"Parmesan Garlic",
+          "description2":"Our wings served with a tasty parmesan garlic sauce",
+        "item3":"Blackberry Dijion",
+          "description3": "If sweet and tangy is your style, try this original recipe",
+        "item4":"Asian Ginger",
+          "description4":"Look no further for sweet heat"
+
+       },
+     
+     "area5":
+       {"id":"sliderTrios",
+        "name":"Slider Trios",
+        "item1":"Cheese Steak",
+          "description1":"Served with peppers, onions, garlic ailoli, mushrooms and provolone on freshly baked buns",
+        "item2":"Pulled Pork",
+          "description2":"Slow smoked pulled pork with apple slaw and herbs on freshly baked buns"
+
+       },
+
+     "area6":
+       {"id":"famousFlatbreads",
+        "name":"Famous Flatbreads",
+        "item1":"Caprese",
+          "description1":"With roasted roma tomatoes, fresh mozzarella, garlic puree, and a drizzle of balsamic glaze",
+        "item2":"Blanca",
+          "description2":"Blend of fresh ricotta, Mozzarella with a hint of lemon. Finished with fresh basil and thyme",
+        "item3":"BBQ Pork",
+          "description3": "Slow smoked pork with fire roasted corn salsa, green onions and Carolina BBQ sauce"
+       },
+
+     "area7":
+       {"id":"toastyTacos",
+        "name":"Toasty Tacos",
+        "item1":"Buffalo Chicken",
+          "description1":"Buffalo blizzard chicken with slaw and blue cheese crumbles. Comes with a carrot & celery slaw with a side of rustic ranch.",
+        "item2":"Fish Tacos",
+          "description2":"Fresh Talipia topped with a zesty coleslaw, roasted corn and black bean salsa",
+        "item3":"Short Rib",
+          "description3":"Beer braised short rib with guacamole, queso fresco, cilantro, lime and fresh pico de gallo"
+       }
+     
+    } 
 }
